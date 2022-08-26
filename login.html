@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- login -->
+    <div class="box" id="signinBox">
+        <div class="judul" id="judul">
+            <h1>👌🏼 CuyUniversity</h1>
+        </div>
+        <h2 class="txt0">
+            "Selamat datang "
+            <b id="role"></b>
+        </h2>
+        <sub class="txt0 large">
+            "Terima kasih "<b id="nama"></b>, 
+            telah berkunjung.
+        </sub>
+        <div class="logoutBtn">
+            <button onclick="logout()" id="logoutBtn">LOGOUT</button>
+        </div>
+    </div>
+    <!-- script -->
+    <script>
+        document.getElementById('role').innerHTML = localStorage.getItem('role')
+        document.getElementById('nama').innerHTML = localStorage.getItem('username')
+
+        function logout() {
+            localStorage.clear();
+            window.location = "index.html";
+        }
+    </script>
+</body>
+
+</html>

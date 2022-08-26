@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesi 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- login -->
+    <div class="box" id="signinBox">
+        <div class="judul" id="judul">
+            <h1>👌🏼 CuyUniversity</h1>
+        </div>
+        <div class="flexAjg" id="loginInput">
+            <div class="divInput">
+                <input type="text" placeholder="Username" id="usernameInput">
+                <input type="password" placeholder="password" id="passwordInput">
+                <button onclick="login()" id="loginBtn">LOGIN</button>
+            </div>
+            <div class="divInput">
+                <p class="warn" id="signinError">Username atau Password salah.</p>
+                <p class="txt">Don't have an account?</p>
+                <span onclick="daftar('daftar')" class="clickHere">Sign up</span>
+            </div>
+        </div>
+    </div>
+    <!-- daftar -->
+    <div class="box" id="signupBox">
+        <div class="judul">
+            <h1>👌🏼 CuyUniversity</h1>
+        </div>
+        <div class="flexAjg">
+            <div class="divInput">
+                <select id="role">
+                    <option value="">-- Pilih Role --</option>
+                    <option value="min">Admin</option>
+                    <option value="Pak Dosen">Pak Dosen</option>
+                    <option value="Mahasiswa">Mahasiswa</option>
+                </select>
+                <input type="text" placeholder="Username" id="usernameInput0">
+                <input type="password" placeholder="password" id="passwordInput0">
+                <button onclick="signup()" id="signupBtn">Sign up</button>
+            </div>
+            <div class="divInput">
+                <p class="warn" id="signupError">Username dan Password tidak boleh kosong.</p>
+                <p class="txt" id="ques">already have an account?</p>
+                <p class="txt" id="terdaftar">Pendaftaran berhasil.</p>
+                <span onclick="daftar('login')" class="clickHere">login</span>
+            </div>
+        </div>
+    </div>
+    <!-- script -->
+    <script type="application/javascript" src="logic.js"></script>
+</body>
+</html>
